@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class lesson {
     public static void main(String[] args){
 
-        int a = 7;
+        int a = 6;
         int b = 8;
         sum(a , b);
         sum(3,a);
