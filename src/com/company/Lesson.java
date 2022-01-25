@@ -2,19 +2,25 @@ package com.company;
 
 import java.util.Scanner;
 
-public class lesson {
-    public static void main(String[] args){
+public class Lesson {
+    public static void main(String[] args) {
 
-        int a = 6;
+        int a = 7;
         int b = 8;
-        sum(a , b);
-        sum(3,a);
-        sum(5,23);
+        sum(a, b);
+        sum(3, a);
+        sum(5, 23);
 
         boolean aGreaterThenB = a > b;
         boolean aLessThenB = a < b;
         boolean aGreaterOrEqualThenB = a >= b;
         boolean aLessOrEqualThenB = a <= b;
+
+        String expression = compareExpression(a,b);
+            System.out.println();
+
+
+
 
         if (aGreaterThenB) {
             System.out.println("a > b");
@@ -42,14 +48,20 @@ public class lesson {
         }
 
 
-
-
-
     }
 
 
-    static void sum(int x, int y){
-        int z =(x+y);
+    static void sum(int x, int y) {
+        int z = x + y;
         System.out.println(z);
+    }
+
+    static String compareExpression(int x , int y) {
+
+        if ( x > y ) {
+            return " x> y" ;
+        } else {
+            return " x<=y ";
+        }
     }
 }
