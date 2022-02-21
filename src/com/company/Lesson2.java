@@ -2,15 +2,14 @@ package com.company;
 
 import java.util.Scanner;
 
-public class lesson {
-    public static void main(String[] args){
-
+public class Lesson2 {
+    static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
         int a = 7;
         int b = 8;
-        sum(a , b);
-        sum(3,a);
-        sum(5,23);
-
+        sum(a, b);
+        sum(3, a);
+        sum(5, 23);
         boolean aGreaterThenB = a > b;
         boolean aLessThenB = a < b;
         boolean aGreaterOrEqualThenB = a >= b;
@@ -21,7 +20,6 @@ public class lesson {
         } else {
             System.out.println("False");
         }
-
         if (aLessThenB) {
             System.out.println("a < b");
         }
@@ -34,22 +32,23 @@ public class lesson {
             System.out.println("False");
         }
 
-        int userInput = new Scanner(System.in).nextInt();
+        System.out.print("Введи число: ");
+        while(!scan.hasNextInt()){
+            System.out.println("Введи число!");
+            scan.next();
+        }
+        int userInput = scan.nextInt();
+
         if (userInput % 2 == 0) {
+
             System.out.println("Число чётное");
         } else {
             System.out.println("Число нечётное");
         }
-
-
-
-
-
     }
 
-
-    static void sum(int x, int y){
-        int z =(x+y);
+    static void sum(int x, int y) {
+        int z = (x + y);
         System.out.println(z);
     }
 }
